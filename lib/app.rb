@@ -1,21 +1,15 @@
 require 'sinatra'
-# get '/' do
-#   "Hello World"
-# end
-#
-# get '/goodbye' do
-#   "Goodbye World"
-# end
-#
-# get'/secret' do
-#   "Rubber Duck"
-# end
 
-get '/cat' do
-  erb(:index)
+get '/form' do
+  erb(:form)
 end
 
 get '/named-cat' do
+  erb(:index)
+end
+
+post '/named-cat' do
   @name = params[:name]
+  puts params
   erb(:index)
 end
