@@ -12,5 +12,10 @@ require 'sinatra'
 # end
 
 get '/cat' do
-erb(:index)
+  erb(:index)
+end
+
+get '/named-cat' do
+  @name = params[:name]
+  erb(:index)
 end
